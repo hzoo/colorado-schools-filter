@@ -167,11 +167,18 @@ table thead {
   width: 110px;
 }
 
-aside {
+#totals {
   font-size: smaller;
   width: 170px;
   height: 20px;
   float: right;
+}
+
+#top_schools_heading{
+  font-size: smaller;
+  // width: 200px;
+  height: 20px;
+  float: left;
 }
 
 table {

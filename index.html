@@ -12,14 +12,14 @@
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <link rel="stylesheet" href="styles/4b91e7ff.main.css">
+        <link rel="stylesheet" href="styles/d5f030f3.main.css">
         <script src="scripts/vendor/cf69c6f2.modernizr.min.js"></script>
     </head>
     <body>
     <div class="container">
         <div class="vis">
             <div class="row">
-                <h3 id="question" class="span10"></h3>
+                <h3 id="question" class="span11"></h3>
                 <a href="https://www.kaggle.com/c/visualize-the-state-of-education-in-colorado">
                     <div id="logo"></div>
                 </a>
@@ -36,13 +36,7 @@
                 </div>
             </div>
 
-            <div class="btn-group labels">
-                <button class="btn">1</button>
-                <button class="btn">2</button>
-                <button class="btn">4</button>
-                <button class="btn">5</button>
-                <button class="btn">6</button>
-                <button class="btn">7</button>
+            <div id="question_labels" class="btn-group labels">
             </div>
 
             <div id="about" class="btn" href="#myModal"  data-toggle="modal">
@@ -63,6 +57,7 @@
             </div>
         </div>
 
+        <aside id="top_schools_heading">Top 30 Schools (with filters, click on any column header to sort)</aside>
         <aside id="totals"><span id="active">-</span> of <span id="total">-</span> schools selected.</aside>
 
         <div id="lists">
@@ -101,18 +96,18 @@
 
         <!-- Add your site or application content here -->
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+        <script type="text/javascript" src="components/jquery/jquery.js"></script>
         <script>window.jQuery || document.write('<script src="scripts/vendor/8bc61845.jquery.min.js"><\/script>')</script>
-        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="components/bootstrap-js/bootstrap.js"></script>
         <script type="text/javascript" src="scripts/vendor/6144d79b.d3.v3.js"></script>
-        <script type="text/javascript" src="scripts/vendor/ffc729f0.queue.min.js"></script>
+        <!-- // <script type="text/javascript" src="components/d3/d3.js"></script> -->
         <script type="text/javascript" src="scripts/vendor/82edec52.topojson.js"></script>
         <script type="text/javascript" src="scripts/vendor/35775416.crossfilter.min.js"></script>
         <script type="text/javascript" src="scripts/vendor/84bd555b.sorttable.js"></script>
         <script type="text/javascript" src="scripts/9decc452.chart.js"></script>
         <script type="text/javascript" src="scripts/535fcd01.draw.js"></script>
         <script type="text/javascript" src="scripts/51f07b34.click.js"></script>
-        <script type="text/javascript" src="scripts/d4f972cf.main.js"></script>
+        <script type="text/javascript" src="scripts/305d7ed7.main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

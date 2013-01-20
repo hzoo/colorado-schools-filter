@@ -95,12 +95,64 @@ var questions = [
 'How do these grades, graduation rates, and college/career readiness metrics compare to labor market and economic data / needs?',
 ];
 
+$.each(questions, function(key, value) {
+  d3.select('#question_labels')
+    .append('button')
+    .attr('class','btn btn'+(key+1))
+    .text(key+1);
+});
+
+var question_num = 0;
+
+$('.btn'+(question_num+1)).addClass('disabled previous-click');
+$('#previous').addClass('disabled');
+
+$('button').on('click', function(e) {
+  question_num = $(this).text()-1;
+
+  $('.previous-click').removeClass('disabled previous-click');
+  $(this).addClass('disabled previous-click');
+
+  if (question_num == 0) $('#previous').addClass('disabled');
+  else if (question_num == questions.length - 1) $('#next').addClass('disabled');
+  else {
+    $('#previous').removeClass('disabled');
+    $('#next').removeClass('disabled');
+  }
+});
+
+$('#previous').on('click', function() {
+  $('#next').removeClass('disabled')
+  if (question_num > 0) {
+    question_num -= 1;
+  }
+  if (question_num == 0) {
+    $('#previous').addClass('disabled');
+  }
+  $('.previous-click').removeClass('disabled previous-click');
+  $('.btn'+(question_num+1)).addClass('disabled previous-click');
+  $('#question').html(questions[question_num]);
+});
+
+$('#next').on('click', function() {
+  $('#previous').removeClass('disabled')
+  if (question_num < questions.length - 1) {
+    question_num += 1;
+  }
+  if (question_num == questions.length - 1) {
+    $('#next').addClass('disabled');
+  }
+  $('.previous-click').removeClass('disabled previous-click');
+  $('.btn'+(question_num+1)).addClass('disabled previous-click');
+  $('#question').html(questions[question_num]);
+});
+
 var current_question = 0;
 d3.select('#question').html(questions[current_question]);
 
-// $('#next').on('click', function() {
+$('#next').on('click', function() {
 
-// });
+});
 
 //render header
 $.each(table_headers, function(key, value) {
