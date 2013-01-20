@@ -1,0 +1,172 @@
+@import "compass_twitter_bootstrap";
+
+//a { text-decoration: none; border-bottom:1px dotted; }
+
+/* Sortable tables */
+table thead {
+    background-color:#333;
+    color:#666;
+    cursor: default;
+
+    th {
+      color: white;
+    }
+}
+
+#previous {
+  // position: absolute;
+  // left: 15px;
+}
+#next {
+  // position: absolute;
+  // left: 30px;
+}
+
+.clear {
+  clear: both;
+}
+
+.background {
+    fill: lightgray;
+    pointer-events: all;
+}
+
+#caption {
+  float: left;
+}
+
+#logo {
+   background-image: url('/images/csg.png');
+   float: right;
+   height: 100px;
+   width: 213px;
+   // position: absolute;
+   // left: 980px;
+   // right: 360px;
+}
+
+#caption_right {
+  float: right;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+#vis_container {
+    fill: gray;
+    clear: both;
+}
+
+.container {
+  width: 1100px !important;
+  border-right: 1px solid darkgray;
+  border-left: 1px solid darkgray;
+}
+
+.vis {
+  margin-bottom: 10px;
+}
+#counties {
+    fill: lightgray;
+    stroke: darkgray;
+    stroke-width: 0.1px;
+}
+
+#states {
+    fill: none;
+    stroke: gray;
+    stroke-width: 0.2px;
+}
+
+#counties path:hover {
+    fill: steelblue;
+}
+
+#charts {
+  float: left;
+  width: 540px;
+  margin-left: 20px;
+}
+
+.chart {
+  float: left;
+  display: inline-block;
+  height: 151px;
+  margin-bottom: 10px;
+}
+
+.reset {
+  padding-left: 1em;
+  font-size: smaller;
+  color: #ccc;
+}
+
+.background.bar {
+  fill: #ccc;
+}
+
+.foreground.bar {
+  fill: steelblue;
+}
+
+.axis path, .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.axis text {
+  font: 10px sans-serif;
+}
+
+.brush rect.extent {
+  fill: steelblue;
+  fill-opacity: .125;
+}
+
+.brush .resize path {
+  fill: #eee;
+  stroke: #666;
+}
+
+#flight-list {
+  min-height: 1024px;
+}
+
+#flight-list .date,
+#flight-list .day {
+  margin-bottom: .4em;
+}
+
+#flight-list .flight {
+  line-height: 1.5em;
+  // background: #eee;
+  width: 1100px; //640px;
+  margin-bottom: 1px;
+}
+
+#flight-list .time {
+  color: #999;
+}
+
+#flight-list .flight div {
+  display: inline-block;
+  width: 110px;
+}
+
+#flight-list div.distance,
+#flight-list div.delay {
+  width: 160px;
+  padding-right: 10px;
+  text-align: right;
+}
+
+#flight-list .early {
+  color: green;
+}
+
+aside {
+  position: absolute;
+  left: 1016px;//740px;
+  font-size: smaller;
+  // width: 220px;
+}

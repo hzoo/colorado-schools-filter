@@ -1,0 +1,102 @@
+JSON
+
+{ id: '0010',
+  name: 'ABRAHAM LINCOLN HIGH SCHOOL',
+  coord: [ '-105.025067', '39.675255' ],
+  population: '1930',
+  pct_a_ind: '0.009326',
+  pct_asian: '0.02902',
+  pct_black: '0.009845',
+  pct_hispa: '0.9166',
+  pct_white: '0.03161',
+  pct_pacif: '0.0005181',
+  pct_2more: '0.003109',
+  pct_free: '0.9300',
+  coact_sci: '0',
+  coact_eng: '0',
+  coact_math: '0',
+  coact_read: '0',
+  remediation: '0.785714',
+  three_yr_overall: '3',
+  three_yr_prof: '2',
+  three_yr_growth: '1',
+  alternative: '0',
+  charter: 'Not',
+  school_grade: '5',
+  rank: '285',
+  overall_achieve: '3',
+  overall_growth: '7',
+  grad_rate: '0.6590'
+}
+
+A book that had been in print for 3000 years, or at least read for 3000 years (you know, you can get in hotel rooms still) will still be here after 3000 years
+
+**
+Possibility of
+**
+
+201x_remediation_HS.csv - Remediation %
+201x_k_12_FRL.csv - free lunch %
+201x_entrl_working.csv -get demographics (population and race)
+201x_COACT.csv- colllege readiness score (0 or 1)
+201x_1YR_3YR_change.csv - change (1,2,3)
+
+201x_final_grade.csv
+school name
+district number
+district name
+emh
+emh_combined
+school id ---
+aec_10 (alternative school) ---------------
+charter/online (charter,online,nothing,both) ---------------
+lowest grade
+highest grade
+initial plan
+final plan
+notes
+emh_2lvl
+lt100pnts
+school grade (overall grade out of 13) ---------------
+rank_tot (rank compared to others)  ---------------
+overall achievment grade  ---------------
+reading achievement
+math achievement
+writing achievement
+science achievement
+overall growth rate  ---------------
+reading growth rate
+math growth rate
+writing growth rate
+grad rate  ---------------
+
+201x_school_address.csv - address
+Organization Code
+School ID --
+Phone number
+School name
+Physical Address
+Physical City ---------
+Physical State
+Physical Zipcode ---------
+
+Others
+
+Subsidized Lunch vs. Academic Achievement
+http://www.flickr.com/photos/85535762@N00/8351565259/in/photostream/lightbox/
+
+# students read y for college
+http://img827.imageshack.us/img827/6274/visualizethestateofpubl.jpg
+
+Long Infographic
+http://infogr.am/Poverty-In-Colorado-Education
+
+How have grades changed over time across the state (or perhaps more importantly how have they remained the same)?
+Where are the A schools primarily located? Our vision is that all kids have access to a high-performing school – how does the Colorado deliver against that promise of equity?
+Are there correlations between A schools and student demographics (free/reduced lunch is a proxy for poverty or by race) – Do poor and minority kids have access to A schools?
+Academic growth is an indicator used in the grading system. It is described in more detail in the data description page and on the Colorado School Grades website, but is perhaps the greatest indicator of how much teaching and learning is actually occurring in the school. That said, where are the schools that have the best sub-grades for student growth? Are there particular schools that have high percentages of low income students AND high grades for student growth. Some may say those schools are doing more to close Colorado’s achievement gap between the wealthy and the poor than any other.
+What percentage of Colorado’s student’s are ready for college and career by school or by school district?
+Which districts have the most A schools, F schools, or improving schools?
+Which schools have improved their letter grades the most?
+How do these grades, graduation rates, and college/career readiness metrics compare to labor market and economic data / needs?
+What have we missed? Please use your creativity to identify interesting trends or insights that the data tells us.
