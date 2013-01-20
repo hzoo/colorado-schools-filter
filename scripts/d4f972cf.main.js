@@ -70,7 +70,8 @@ var table_headers = [
   '% Free/Reduced',
   'School Value',
   'Achievement',
-  'Growth'
+  'Growth',
+  'Rank'
 ];
 
 var chart_headers = [
@@ -312,6 +313,10 @@ d3.json('/data/schools_3.json', function(data_schools) {
       flightEnter.append('td')
           .attr('class', 'destination')
           .text(function(d) { return d.values[0].overall_growth; });
+
+      flightEnter.append('td')
+          .attr('class', 'destination')
+          .text(function(d) { return d.values[0].rank; });
 
       // flightEnter.append('td')
       //     .attr('class', 'distance')
