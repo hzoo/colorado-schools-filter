@@ -1,11 +1,11 @@
 {
-  "name":    "colorado-school-grades",
+  "name":    "facebook-template-node",
   "version": "0.0.1",
 
-  "description": "colorado-school-grades, Kaggle contest - Henry",
+  "description": "Template app for Heroku / Facebook integration, Node.js language",
 
   "dependencies": {
-    "express": "~3.0.4"
+    "express": "~3.0.4",
   },
 
   "engines": {

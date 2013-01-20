@@ -24,15 +24,32 @@ table thead {
 
 .clear {
   clear: both;
+  h3 {
+    display: inline-block;
+  }
 }
 
 .background {
-    fill: lightgray;
     pointer-events: all;
 }
 
 #caption {
+  position: absolute;
+  right: 0px;
+}
+
+.inline {
+  display: inline-block;
+}
+
+#about {
+  float: right;
+  margin-right: 0px;
+}
+
+.labels {
   float: left;
+  display: inline-block;
 }
 
 #logo {
@@ -48,11 +65,12 @@ table thead {
 #caption_right {
   float: right;
   display: inline-block;
-  margin-right: 5px;
+  margin-right: 0px;
 }
 
 #vis_container {
-    fill: gray;
+    position: relative;
+    fill: white;
     clear: both;
 }
 
@@ -64,6 +82,7 @@ table thead {
 
 .vis {
   margin-bottom: 10px;
+  margin: 0 5px;
 }
 #counties {
     fill: lightgray;
@@ -165,8 +184,17 @@ table thead {
 }
 
 aside {
-  position: absolute;
-  left: 1016px;//740px;
+  // position: absolute;
+  // left: 1016px;//740px;
   font-size: smaller;
-  // width: 220px;
+  width: 170px;
+  height: 20px;
+  float: right;
+}
+
+table {
+  width: 100%;
+  th {
+    text-align: left;
+  }
 }

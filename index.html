@@ -12,7 +12,7 @@
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <link rel="stylesheet" href="styles/c3784faf.main.css">
+        <link rel="stylesheet" href="styles/1cde5e3d.main.css">
         <script src="scripts/vendor/cf69c6f2.modernizr.min.js"></script>
     </head>
     <body>
@@ -25,7 +25,7 @@
                 </a>
             </div>
 
-            <div class="btn-group">
+            <div class="btn-group labels">
                 <div id="previous" class="btn clear">
                     Prev
                     <i class="icon-arrow-left"></i>
@@ -36,21 +36,32 @@
                 </div>
             </div>
 
-            <div class="questions">
+            <div class="btn-group labels">
+                <button class="btn">1</button>
+                <button class="btn">2</button>
+                <button class="btn">4</button>
+                <button class="btn">5</button>
+                <button class="btn">6</button>
+                <button class="btn">7</button>
+            </div>
+
+            <div id="about" class="btn" href="#myModal"  data-toggle="modal">
+                About
+                <i class="icon-user"></i>
             </div>
 
             <div class="clear">
-                <h3 id="caption">Hover over a county:</h3>
+                <h3>Drag the histogram bars to filter data.</h3>
                 <h3 id="caption_right"><span id="active_top">-</span> schools selected</h3>
             </div>
 
             <div id="vis_container" class="row">
+                <h3 id="caption">Hover over a county:</h3>
                 <svg id="map"></svg>
                 <div id="charts">
                 </div>
             </div>
         </div>
-
 
         <aside id="totals"><span id="active">-</span> of <span id="total">-</span> schools selected.</aside>
 
@@ -60,6 +71,30 @@
 
     </div>
 
+      <div id="myModal" class="modal fade hide" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+      <h5 id="myModalLabel">Kaggle: Colorado School Grades</h5>
+    </div>
+    <div class="modal-body">
+      <p><b>Purpose:</b> Allow easy filtering of relevant features (location, grades, demographics, etc) for exploration.</p>
+      <p><b>Instructions:</b> Use the mouse to drag/create filters on the many variables in the data, which changes the histograms/map. You can make filters for each variable, letting one ask many questions.</p>
+      <br>
+      <p><b>Idea:</b> Guide users through previous analysis (questions, observations).</p>
+      <p><b>Data Problems:</b> Bad data (less binning (1,2,3 = decrease, same, increase), 1-13 = Grades F-A, missing data, inconsistent data)</p>
+      <p><b>To-do:</b> Add more questions and analysis, further filters, different views of the data.</p>
+      <br>
+      <p><b>Libraries:</b> d3.js, crossfilter.js, queue.js, topojson.js</p>
+      <p><b>Tools:</b> ST2, Yeoman</p>
+      <p><b>Manipulate Data:</b> used Node.js to parse csv's</p>
+
+    </div>
+    <div class="modal-footer">
+      <p style="float: left">By: <b><a href='http://github.com/eltacodeldiablo'>Henry Zhu</a></b> ~ 4days</p>
+      <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    </div>
+  </div>
+
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
         <![endif]-->
@@ -68,6 +103,7 @@
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="scripts/vendor/8bc61845.jquery.min.js"><\/script>')</script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="scripts/vendor/6144d79b.d3.v3.js"></script>
         <script type="text/javascript" src="scripts/vendor/ffc729f0.queue.min.js"></script>
         <script type="text/javascript" src="scripts/vendor/82edec52.topojson.js"></script>
