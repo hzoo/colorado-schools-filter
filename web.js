@@ -4,12 +4,17 @@ var util    = require('util');
 // create an express webserver
 var app = express.createServer(
   express.logger(),
-  express.static(__dirname + '/public'),
   express.bodyParser(),
   express.cookieParser(),
   // set this to a secret value to encrypt session cookies
   express.session({ secret: process.env.SESSION_SECRET || 'asdf32sd12w' })
 );
+
+app.use('/data',express.static(__dirname + '/data'));
+app.use('/images',express.static(__dirname + '/images'));
+app.use('/scripts',express.static(__dirname + '/scripts'));
+app.use('/vendor',express.static(__dirname + '/scripts/vendor'));
+app.use('/styles',express.static(__dirname + '/styles'));
 
 // listen to the PORT given to us in the environment
 var port = process.env.PORT || 3000;
