@@ -1,10 +1,6 @@
 CACHE MANIFEST
 
-<<<<<<< HEAD
-# Time: Sun Jan 20 2013 04:53:47 GMT-0500 (EST)
-=======
-# Time: Sun Jan 20 2013 01:23:50 GMT-0500 (EST)
->>>>>>> ca82d7978f4c8fb9ecc3f90c3eb060d28c4f1ed2
+# Time: Sun Jan 20 2013 05:07:03 GMT-0500 (EST)
 # This manifest was created by confess.js, http://github.com/jamesgpearce/confess
 #
 # Retrieved URL: http://localhost:3501/
@@ -35,10 +31,7 @@ http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js
 http://localhost:3501/images/c9b87ac9.csg.png
 http://localhost:3501/images/glyphicons-halflings-white.png?1358661727
 http://localhost:3501/images/glyphicons-halflings.png?1358661727
-<<<<<<< HEAD
 http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js
-=======
->>>>>>> ca82d7978f4c8fb9ecc3f90c3eb060d28c4f1ed2
 scripts/51f07b34.click.js
 scripts/535fcd01.draw.js
 scripts/9decc452.chart.js
@@ -49,11 +42,7 @@ scripts/vendor/82edec52.topojson.js
 scripts/vendor/84bd555b.sorttable.js
 scripts/vendor/cf69c6f2.modernizr.min.js
 scripts/vendor/ffc729f0.queue.min.js
-<<<<<<< HEAD
 styles/1cde5e3d.main.css
-=======
-styles/c3784faf.main.css
->>>>>>> ca82d7978f4c8fb9ecc3f90c3eb060d28c4f1ed2
 
 NETWORK:
 *

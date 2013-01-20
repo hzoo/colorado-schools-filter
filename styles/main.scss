@@ -24,24 +24,16 @@ table thead {
 
 .clear {
   clear: both;
-<<<<<<< HEAD
   h3 {
     display: inline-block;
   }
 }
 
 .background {
-=======
-}
-
-.background {
-    fill: lightgray;
->>>>>>> ca82d7978f4c8fb9ecc3f90c3eb060d28c4f1ed2
     pointer-events: all;
 }
 
 #caption {
-<<<<<<< HEAD
   position: absolute;
   right: 0px;
 }
@@ -58,9 +50,6 @@ table thead {
 .labels {
   float: left;
   display: inline-block;
-=======
-  float: left;
->>>>>>> ca82d7978f4c8fb9ecc3f90c3eb060d28c4f1ed2
 }
 
 #logo {
@@ -76,20 +65,12 @@ table thead {
 #caption_right {
   float: right;
   display: inline-block;
-<<<<<<< HEAD
   margin-right: 0px;
 }
 
 #vis_container {
     position: relative;
     fill: white;
-=======
-  margin-right: 5px;
-}
-
-#vis_container {
-    fill: gray;
->>>>>>> ca82d7978f4c8fb9ecc3f90c3eb060d28c4f1ed2
     clear: both;
 }
 
@@ -101,10 +82,7 @@ table thead {
 
 .vis {
   margin-bottom: 10px;
-<<<<<<< HEAD
   margin: 0 5px;
-=======
->>>>>>> ca82d7978f4c8fb9ecc3f90c3eb060d28c4f1ed2
 }
 #counties {
     fill: lightgray;
@@ -206,7 +184,6 @@ table thead {
 }
 
 aside {
-<<<<<<< HEAD
   // position: absolute;
   // left: 1016px;//740px;
   font-size: smaller;
@@ -220,10 +197,4 @@ table {
   th {
     text-align: left;
   }
-=======
-  position: absolute;
-  left: 1016px;//740px;
-  font-size: smaller;
-  // width: 220px;
->>>>>>> ca82d7978f4c8fb9ecc3f90c3eb060d28c4f1ed2
 }
