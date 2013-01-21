@@ -6,10 +6,10 @@
 table thead {
     background-color:#333;
     color:#666;
-    cursor: default;
-
+    cursor: pointer;
     th {
       color: white;
+      text-decoration: none; border-bottom:1px dotted;
     }
 }
 
@@ -52,6 +52,12 @@ table thead {
   display: inline-block;
 }
 
+.title {
+  cursor: help;
+  display: inline-block;
+  text-decoration: none; border-bottom:1px dotted;
+}
+
 #logo {
    background-image: url('/images/csg.png');
    float: right;
@@ -75,6 +81,7 @@ table thead {
 
 #map {
   fill: white;
+  cursor: pointer;
 }
 
 .container {
