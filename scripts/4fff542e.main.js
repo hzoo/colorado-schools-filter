@@ -173,15 +173,32 @@ $('#next').on('click', function() {
 var current_question = 0;
 d3.select('#question').html(questions[current_question]);
 
-$('#next').on('click', function() {
-
-});
-
 //render header
 $.each(table_headers, function(key, value) {
   header_flight.append('th')
     // .attr('class', 'origin')
     .text(function() { return value; });
+});
+
+var title_detail = [
+  'The x axis shows the <b>% of white students       </b> in a school.',
+  'The x axis shows the <b>% of students with either free or reduced lunch</b> in a school.',
+  'The x axis shows the <b>grade                     </b> given to a school. (higher is better)',
+  'The x axis shows the <b>total number of students  </b> in a school.',
+  'The x axis shows the <b>overall achievement number</b> given to a school. (higher is better)',
+  'The x axis shows the <b>overall growth number     </b> given to a school. (higher is better)',
+];
+
+var histogram_detail = 'A histogram is a graphical representation showing a visual impression of the distribution of data.' +
+'<br>' +
+'Here, the y axis is the <b>number of schools with a value of the x</b>' +
+' and the x axis is the title over the histogram (example: population)';
+$('.histogram').popover({
+    placement: 'right',
+    html: 'true',
+    content: histogram_detail,
+    trigger: 'hover',
+    delay: '500'
 });
 
 $.each(chart_headers, function(key, value) {
@@ -191,8 +208,16 @@ $.each(chart_headers, function(key, value) {
     .append('div')
       .attr('class', 'heading')
     .append('div')
-      .attr('class', 'title')
+      .attr('class', 'title title' + key)
       .text(value);
+
+  $('.title' + key).popover({
+    placement: 'right',
+    html: 'true',
+    content: title_detail[key],
+    trigger: 'hover',
+    delay: '500'
+  });
 });
 
 d3.json('/data/schools_3.json', function(data_schools) {
@@ -209,6 +234,9 @@ d3.json('/data/schools_3.json', function(data_schools) {
 
   var nestByPopulation = d3.nest()
   .key(function(d) { return d.population; });
+
+  var nestByRank = d3.nest()
+  .key(function(d) { return d.rank; });
 
   data_schools.forEach(function(d, i) {
     d.freeLunch     = +d.freeLunch;
@@ -234,7 +262,7 @@ d3.json('/data/schools_3.json', function(data_schools) {
     freeLunchs      = freeLunch.group(function(d) { return Math.floor(d / .05) * .05; }),
 
     gradRate        = school.dimension(function(d) { return Math.min(0.99,d.grad_rate); }),
-    gradRates       = gradRate.group(function(d) { return Math.floor(d / .05) * .05; }),
+    // gradRates       = gradRate.group(function(d) { return Math.floor(d / .05) * .05; }),
 
     schoolGrade     = school.dimension(function(d) { return d.school_grade; }),
     schoolGrades    = schoolGrade.group();
@@ -302,7 +330,11 @@ d3.json('/data/schools_3.json', function(data_schools) {
 
   var chart = d3.selectAll('.chart')
     .data(charts)
-    .each(function(chart) { chart.on('brush', renderAll).on('brushend', renderAll); });
+    .each(function(chart) {
+      chart
+      .on('brush', renderAll)
+      .on('brushend', renderAll);
+    });
 
   // Render the initial lists.
   var list  = d3.selectAll('.list')
@@ -321,17 +353,17 @@ d3.json('/data/schools_3.json', function(data_schools) {
 
   // Whenever the brush moves, re-rendering everything.
   function renderAll() {
-    plotPoints(coord.top(Infinity));
     chart.each(render);
     list.each(render);
-    sorttable.makeSortable(document.getElementById('flight-list'));
     d3.select('#active_top').text(formatNumber(all.value()));
     d3.select('#active').text(formatNumber(all.value()));
+    plotPoints(coord.top(Infinity));
+    sorttable.makeSortable(document.getElementById('flight-list'));
   }
 
   function schoolList(div) {
     // var flightsByDate = nestByDate.entries(date.top(40));
-    var schoolsByDate  = nestByPopulation.entries(population.top(30));
+    var schoolsByDate  = nestByRank.entries(population.top(30));
 
     div.each(function() {
       // var date = d3.select(this).selectAll('.date')
@@ -355,7 +387,8 @@ d3.json('/data/schools_3.json', function(data_schools) {
       // population.exit().remove();
 
       var flight = d3.select(this).selectAll('.flight')
-          .data(schoolsByDate, function(d) { return d.values; }, function(d) { return d.index; });
+          .data(schoolsByDate, function(d) { return d.key; });
+          //function(d) { return d.values; }, function(d) { return d.index; });
 
       var flightEnter = flight.enter()
           .append('tr')

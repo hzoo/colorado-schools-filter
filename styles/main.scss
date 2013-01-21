@@ -26,6 +26,12 @@ table thead {
   clear: both;
   h3 {
     display: inline-block;
+
+    div {
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: normal;
+    }
   }
 }
 
