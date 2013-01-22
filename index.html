@@ -107,8 +107,17 @@
         <script type="text/javascript" src="scripts/4fff542e.main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-        var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-37869019-1"]);_gaq.push(["_setDomainName","herokuapp.com"]);_gaq.push(["_trackPageview"]);(function(){var e=document.createElement("script");e.type="text/javascript";e.async=true;e.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()
+        <script type="text/javascript">
+            //ga
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-37869019-1']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
         </script>
     </body>
 </html>
